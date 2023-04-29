@@ -26,7 +26,7 @@ main {
   margin: 0 auto;
   position: relative;
   width: 75%;
-  height: 70%;
+  height: 600px;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -231,7 +231,7 @@ right: 5%;
   main {
     position: relative;
     width: 85%;
-    height: 70%;
+    height: 500px;
   }
   .current {
     width: 40%;
@@ -256,5 +256,61 @@ right: 5%;
   .dice {
     top: 35%;
     height: 90px;
+  }
+  .guide{
+    top: 40%;
+    left: 15%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main {
+    position: relative;
+    width: 95%;
+    height: 400px;
+    overflow: visible;
+  }
+  .current {
+    width: 50%;
+    padding: 10px;
+
+  }
+  .current-label {
+    margin-bottom: 0.8rem;
+    font-size: clamp(10px, 2vw, 20px);
+  }
+  .current-score {
+    font-size: clamp(15px, 3vw, 30px);
+  }
+  .btn {
+    font-size: clamp(10px, 1vw, 15px);
+    padding: 5px 10px;
+  }
+  .btn--new {
+    top: -50px;
+  }
+  .btn--roll {
+    top: 103%;
+    left: 30%;
+    border: solid 1px #bf2e34;
+  }
+  .btn--hold {
+    top: 103%;
+    left: 70%;
+    border: solid 1px #bf2e34;
+  }
+  .dice {
+    top: 40%;
+    height: 70px;
+  }
+  .guide{
+    top: 30%;
+    left: 0;
+    padding: 0 10px;
+    margin-inline: 5px;
+  }
+  .fa-circle-xmark{
+  position: absolute;
+  top: 5%;
+  right: 2%;
   }
 }
