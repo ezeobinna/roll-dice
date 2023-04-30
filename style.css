@@ -19,10 +19,12 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 /* LAYOUT */
-main {
+
+.gamepage {
   margin: 0 auto;
   position: relative;
   width: 75%;
@@ -228,7 +230,7 @@ right: 5%;
 }
 
 @media screen and (max-width: 768px) {
-  main {
+  .gamepage {
     position: relative;
     width: 85%;
     height: 500px;
@@ -263,7 +265,7 @@ right: 5%;
   }
 }
 @media screen and (max-width: 480px) {
-  main {
+  .gamepage {
     position: relative;
     width: 95%;
     height: 400px;
@@ -313,4 +315,105 @@ right: 5%;
   top: 5%;
   right: 2%;
   }
+}
+
+
+
+
+
+/* homepage */
+.homepage{
+  position: relative;
+  width: 50%;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+}
+.title{
+  padding-top: 40px;
+  margin-bottom: 80px;
+}
+
+.playerswrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logobox{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.rolldicelogo{
+  height: 100px;
+  width: 100px;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  position: relative;
+  animation-name: mybtn;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes mybtn {
+  0% {left:0%;}
+  5% {left:5%;}
+  15% {left:15%;}
+  30% {left:30%;}
+  45% {left:45%;}
+  60% {left:60%;}
+  75% {left:75%;}
+  90% {left:90%px;}
+  100% {left:100%;}
+}
+.inputplayerbox{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.eachplayer{
+  margin-bottom: 20px;
+}
+.eachplayer input{
+  outline: none;
+  border-style: none;
+  border-radius: 8px;
+  height: 30px;
+  background-color: rgba(134, 131, 131, 0.35);
+}
+.submit{
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: clamp(12px, 1.5vw, 20px);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 7px 25px;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.hiddengamepage{
+  display: none;
 }

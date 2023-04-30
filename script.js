@@ -22,6 +22,41 @@ score2.textContent = 0;
 let playing = true;
 dice.classList.add('hidden');
 
+
+
+
+const playerinput1 = document.querySelector("#player1");
+const playerinput2 = document.querySelector("#player2");
+const startbtn = document.querySelector(".submit");
+const name1 = document.querySelector("#name--0");
+const name2 = document.querySelector("#name--1");
+const gamepage = document.querySelector(".gamepage");
+const homepage = document.querySelector(".homepage");
+
+startbtn.addEventListener("click", function () {
+    gamepage.classList.remove("hiddengamepage");
+    homepage.classList.add("hiddengamepage");
+    name1.textContent = playerinput1.value;
+    name2.textContent = playerinput2.value;
+});
+
+const changelogo = function() {
+    let dicelogo = document.querySelector(".rolldicelogo");
+    let dicelogos = [
+        "dice-1.png",
+        "dice-2.png",
+        "dice-3.png",
+        "dice-4.png",
+        "dice-5.png",
+        "dice-6.png",
+    ];
+
+    const logo = dicelogos[Math.floor(Math.random() * dicelogos.length)];
+    dicelogo.src = logo;
+
+}
+setInterval(changelogo, 500)
+
 btnRoll.addEventListener('click', function() {
     if (playing) {
         let rollDice = Math.trunc(Math.random() * 6) + 1;
