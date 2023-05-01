@@ -24,6 +24,7 @@
     </div>
     
     <button class="guidebutton"><i class="fa-brands fa-glide fa-xl"></i>Guide</button>
+    <button class="endbutton"><i class="fa-solid fa-user fa-2xl"></i></button>
     <!-- home page -->
     <div class="homepage">
       <h1 class="title">
@@ -36,18 +37,19 @@
         <div class="inputplayerbox">
           <div class="eachplayer ep1">
             <label for="player1"> Player 1
-              <input id="player1">
+              <input id="player1" required />
             </label>
           </div>
           <div class="eachplayer ep2">
             <label for="player2"> Player 2
-              <input id="player2">
+              <input id="player2" required />
             </label>
           </div>
-          <button class="submit">Start</button>
+          <button class="submit" type="submit">Start Game</button>
         </div>
       </div>
     </div>
+    <!-- game page -->
     <main class="gamepage hiddengamepage">
       <div>
       </div>

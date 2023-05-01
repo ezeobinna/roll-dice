@@ -32,13 +32,49 @@ const name1 = document.querySelector("#name--0");
 const name2 = document.querySelector("#name--1");
 const gamepage = document.querySelector(".gamepage");
 const homepage = document.querySelector(".homepage");
+const error1 = document.querySelector(".errr1");
+const error2 = document.querySelector(".errr2");
+const endbutton = document.querySelector(".endbutton");
 
 startbtn.addEventListener("click", function () {
-    gamepage.classList.remove("hiddengamepage");
-    homepage.classList.add("hiddengamepage");
-    name1.textContent = playerinput1.value;
-    name2.textContent = playerinput2.value;
+    if (playerinput1.value && playerinput2.value !== "") {
+        gamepage.classList.remove("hiddengamepage");
+        homepage.classList.add("hiddengamepage");
+        name1.textContent = playerinput1.value;
+        name2.textContent = playerinput2.value;
+    } else {
+        if (playerinput1.value == "" && playerinput2.value == "") {
+            error1.textContent = "Enter players name!!!";
+            error2.textContent = "Enter players name!!!";
+        } else if (playerinput1.value == "") {
+            error1.textContent = "Enter players name!!!";
+        } else if (playerinput2.value == "") {
+            error2.textContent = "Enter players name!!!";
+        }
+    }
+    
 });
+endbutton.addEventListener("click", function () {
+    gamepage.classList.add("hiddengamepage");
+    homepage.classList.remove("hiddengamepage");
+    playerinput1.value = "";
+    playerinput2.value = "";
+
+    dice.classList.add("hidden");
+    playing = true;
+    currentScore1 = 0;
+    current_score1.textContent = currentScore1;
+    currentScore2 = 0;
+    current_score2.textContent = currentScore2;
+    scoreNumber1 = 0;
+    scoreNumber2 = 0;
+    score1.textContent = scoreNumber1;
+    score2.textContent = scoreNumber2;
+    player0.classList.remove("player--winner");
+    player1.classList.remove("player--winner");
+    player0.classList.add("player--active");
+    player1.classList.remove("player--active");
+})
 
 const changelogo = function() {
     let dicelogo = document.querySelector(".rolldicelogo");

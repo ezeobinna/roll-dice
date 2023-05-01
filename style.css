@@ -225,9 +225,139 @@ right: 5%;
   padding-right: 5px;
   color: #c7365f;
 }
+.endbutton{
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  width: 40px;
+  padding-block: 10px;
+  border-radius: 5px;
+  border-color: #c7365f;
+  color: #c7365f;
+}
 .hiddenguide{
   display: none;
 }
+
+
+/* homepage */
+.homepage{
+  position: relative;
+  width: 50%;
+  /* height: 550px; */
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+}
+.title{
+  padding-block: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(25px, 3vw, 40px);
+  color: #bc191f;
+  /* text-shadow: 0 0 5px #0d0d0d; */
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.51);
+  border-radius: 8px;
+  background-color: #73707038;
+  font-weight: 600;
+}
+
+.playerswrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.logobox{
+  width: 80%;
+  height: 200PX;
+  margin-bottom: 10px;
+}
+.rolldicelogo{
+  height: 100px;
+  width: 100px;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  position: relative;
+  animation-name: mybtn;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes mybtn {
+  0% {left:0%; top: 0px;}
+  5% {left:5%; top: 5%;}
+  15% {left:15%; top: 13%;}
+  30% {left:30%; top: 21%;}
+  45% {left:45%; top: 30%; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.6);}
+  60% {left:60%; top: 21%;}
+  75% {left:75%; top: 13%;}
+  90% {left:90%px;top: 5%;}
+  100% {left:100%; top: 0%;}
+}
+.inputplayerbox{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.3);
+}
+.eachplayer{
+  margin-bottom: 10px;
+  width: 100%;
+}
+.eachplayer label{
+  font-size: clamp(15px, 1.8vw, 25px);
+  color: #bf2e34;
+  font-weight: 600;
+}
+.eachplayer input{
+  outline: none;
+  border-style: none;
+  border-radius: 8px;
+  height: 30px;
+  background-color: rgba(134, 131, 131, 0.35);
+  width: 100%;
+}
+.submit{
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: clamp(12px, 1.5vw, 20px);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 7px 25px;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+.hiddengamepage{
+  display: none;
+}
+
+
+
+/* tablets */
 
 @media screen and (max-width: 768px) {
   .gamepage {
@@ -262,6 +392,22 @@ right: 5%;
   .guide{
     top: 40%;
     left: 15%;
+  }
+  /* home page */
+  .homepage{
+    width: 60%;
+    padding: 30px;
+  }
+  .logobox{
+    width: 70%;
+  }
+  .inputplayerbox{
+    padding: 20px 20px;
+  }
+  .submit{
+    font-size: clamp(10px, 2.5vw, 40px);
+    padding: 7px 7px;
+    width: 50%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -315,105 +461,40 @@ right: 5%;
   top: 5%;
   right: 2%;
   }
+
+
+
+  /* home page mobile view */
+    .homepage{
+    width: 80%;
+    padding: 30px;
+  }
+  .logobox{
+    width: 70%;
+  }
+  .inputplayerbox{
+    padding: 20px 20px;
+  }
+  .title{
+    font-size: clamp(10px, 5vw, 40px);
+  }
+  .submit{
+    font-size: clamp(10px, 2vw, 12px);
+    padding: 7px 7px;
+    width: 50%;
+  }
+  .rolldicelogo{
+    height: 60px;
+    width: 60px;
+  }
+  .logobox{
+    width: 80%;
+    height: 150PX;
+    margin-bottom: 10px;
+  }
 }
 
 
 
 
 
-/* homepage */
-.homepage{
-  position: relative;
-  width: 50%;
-  height: 600px;
-  background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(200px);
-  filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 20px;
-}
-.title{
-  padding-top: 40px;
-  margin-bottom: 80px;
-}
-
-.playerswrapper{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.logobox{
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-.rolldicelogo{
-  height: 100px;
-  width: 100px;
-  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.8);
-  border-radius: 8px;
-  position: relative;
-  animation-name: mybtn;
-  animation-duration: 5s;
-  animation-direction: alternate-reverse;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes mybtn {
-  0% {left:0%;}
-  5% {left:5%;}
-  15% {left:15%;}
-  30% {left:30%;}
-  45% {left:45%;}
-  60% {left:60%;}
-  75% {left:75%;}
-  90% {left:90%px;}
-  100% {left:100%;}
-}
-.inputplayerbox{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
-  height: 200px;
-  align-items: center;
-  justify-content: center;
-}
-.eachplayer{
-  margin-bottom: 20px;
-}
-.eachplayer input{
-  outline: none;
-  border-style: none;
-  border-radius: 8px;
-  height: 30px;
-  background-color: rgba(134, 131, 131, 0.35);
-}
-.submit{
-  color: #444;
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: clamp(12px, 1.5vw, 20px);
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 400;
-  transition: all 0.2s;
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  padding: 7px 25px;
-  border-radius: 50rem;
-  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
-}
-.hiddengamepage{
-  display: none;
-}
